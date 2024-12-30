@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Ichhihana-Sanagai-Korea-Sansar",
-    "slug": "Ichhihana-Sanagai-Korea-Sansar",
+    "name": "Korea Sansar-Ichhihana",
+    "slug": "ichhihan-sanagai-korea-sansar",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,29 +13,60 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/logo.png",
+        "foregroundImagePadding": {
+          "top": 10,
+          "bottom": 10,
+          "left": 10,
+          "right": 10
+        },
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.inpro.koreasansarichhihana"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/logo.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow to access your camera",
+          "microphonePermission": "Allow to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow to use your location."
+        }
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "23b53c7c-243f-4270-a9cd-656948f3bcf9"
+      }
+    },
+    "owner": "inpro"
   }
 }
